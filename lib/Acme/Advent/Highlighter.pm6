@@ -13,7 +13,7 @@ method render (Str:D $c, :$wrap) {
     my $content = $c.match( /^ 'http' 's'? '://'/ ) ?? do {
         DEBUG "Detected a URL as content… fetching data from $c";
         get $c
-    } !! (try $c.IO.f)
+    } !! $c.IO ~~ :f:r
         ?? do {
             DEBUG "Assuming content is a filename… slurping";
             $c.IO.slurp
