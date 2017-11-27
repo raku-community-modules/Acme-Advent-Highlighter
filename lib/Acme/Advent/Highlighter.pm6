@@ -13,7 +13,7 @@ method render (Str:D $c, :$wrap) {
     my $content = $c.match( /^ 'http' 's'? '://'/ ) ?? do {
         DEBUG "Detected a URL as content… fetching data from $c";
         get $c
-    } !! $c.IO ~~ :f:r
+    } !! $c.IO ~~ :f & :r
         ?? do {
             DEBUG "Assuming content is a filename… slurping";
             $c.IO.slurp
@@ -126,4 +126,6 @@ sub highlight ($dom) {
     }
 }
 
-sub DEBUG { note $^text }
+sub DEBUG {
+    $*ACME_ADVENT_HIGHLIGHTER_SILENCE_DEBUG or note $^text
+}

@@ -12,6 +12,9 @@
         "UUID",
         "WWW"
     ],
+    "test-depends": [
+        "Test::When"
+    ],
     "provides"     : {
         "Advent::Highlighter::HTMLParser":
             "lib/Acme/Advent/Highlighter/HTMLParser.pm6",
