@@ -1,0 +1,22 @@
+{
+    "perl"         : "6.c",
+    "name"         : "Acme::Advent::Highlighter",
+    "license"      : "Artistic-2.0",
+    "version"      : "1.001001",
+    "description"  : "Preprocessor for Perl 6 Advent Articles",
+    "tags"         : [ "utils" ],
+    "depends"      : [
+        "Text::Markdown",
+        "DOM::Tiny",
+        "HTTP::Server::Tiny",
+        "Pastebin::Gist",
+        "UUID",
+        "WWW"
+    ],
+    "provides"     : {
+        "Toaster"     : "lib/Toaster.pm6",
+        "Toaster::DB" : "lib/Toaster/DB.pm6"
+    },
+    "authors"       : ["Zoffix Znet"],
+    "support"       : {"source" : "https://github.com/zoffixznet/perl6-Acme-Advent-Highlighter.git"}
+}
