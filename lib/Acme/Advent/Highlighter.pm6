@@ -9,7 +9,16 @@ use WWW;
 has Str:D $.token is required;
 has Pastebin::Gist:D $!gist = Pastebin::Gist.new: :$!token;
 
-method render (Str:D $content, :$wrap) {
+method render (Str:D $c, :$wrap) {
+    my $content = $c.match( /^ 'http' 's'? '://'/ ) ?? do {
+        DEBUG "Detected a URL as content… fetching data from $c";
+        get $c
+    } !! (try $c.IO.f)
+        ?? do {
+            DEBUG "Assuming content is a filename… slurping";
+            $c.IO.slurp
+        } !! $c;
+
     DEBUG 'Rendering Markdown';
     my $html = Text::Markdown.new($content).render;
     DEBUG 'Finding code chunks in document';
@@ -32,11 +41,12 @@ method render (Str:D $content, :$wrap) {
     for $gist-dom.find('.file') {
         DEBUG "Grabbing highlighted code for $_.attr("id")";
         my $code = .at: 'table.highlight';
-        $code.at('.js-line-number').remove;
+        .remove for $code.at: '.js-line-number';
         %codes{
             .attr('id').substr: 'file-'.chars, * - '-p6'.chars
         }<dom>.content: ~$code
     }
+    DEBUG "Deleting the gist";
     $!gist.delete: $gist;
 
     highlight $dom;
@@ -47,8 +57,31 @@ sub htmlify (Str:D $html) {
     q:to/END/;
     <!DOCTYPE html>
     <meta charset="utf-8">
-    <div style="margin: 20px auto; width: 690px;">
+    <style>
+      body {
+          background: #f3f3f3;
+          color: #333;
+      }
+      #main-content {
+          margin: 20px auto;
+          width: 584px;
+          font-size: 18px;
+      }
+      pre {
+          width: 100%;
+          box-sizing: border-box;
+          overflow: auto;
+          font-size: 16px;
+      }
+    </style>
+    <div id="main-content">
+
+        <!-- STUFF BELOW GOES INTO Wordpress -->
+
         \qq[$html]
+
+        <!-- STUFF ABOVE GOES INTO Wordpress -->
+
     </div>
     END
 }
@@ -81,8 +114,8 @@ sub highlight ($dom) {
         '.pl-sg' => 'color: #959da5',
         '.pl-corl' => 'text-decoration: underline; color: #032f62',
 
-        'td' => 'border: 0; padding: 0; background: white',
-        'tr, table' => 'background: white; padding: 0; margin: 0',
+        'td' => 'border: 0; padding: 0; background: none',
+        'tr, table' => 'background: none; padding: 0; margin: 0',
         'pre' => 'border: 1px dotted #ddd; background: none;'
             ~ ' border-radius: 3px; padding: 10px;',
     ;
