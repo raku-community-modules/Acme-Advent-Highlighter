@@ -8,14 +8,15 @@
     "depends"      : [
         "Text::Markdown",
         "DOM::Tiny",
-        "HTTP::Server::Tiny",
         "Pastebin::Gist",
         "UUID",
         "WWW"
     ],
     "provides"     : {
-        "Toaster"     : "lib/Toaster.pm6",
-        "Toaster::DB" : "lib/Toaster/DB.pm6"
+        "Advent::Highlighter::HTMLParser":
+            "lib/Acme/Advent/Highlighter/HTMLParser.pm6",
+        "Acme::Advent::Highlighter":
+            "lib/Acme/Advent/Highlighter.pm6"
     },
     "authors"       : ["Zoffix Znet"],
     "support"       : {"source" : "https://github.com/zoffixznet/perl6-Acme-Advent-Highlighter.git"}
