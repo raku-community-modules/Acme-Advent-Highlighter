@@ -19,10 +19,12 @@ script grabs syntax highlighted code from it, and then *deletes it*.
     ```bash
     zef install Acme::Advent::Highlighter
     ```
-    
+
     If you're using `rakudobrew`, then [don't](https://github.com/zoffixznet/r),
     but if you insist, be sure to run `rakudobrew rehash` after installation,
     to update script shims.
+
+    If you want to run extra tests, set `ONLINE_TESTING=1` env var.
 
 2. Write your article in basic
     [Markdown](https://daringfireball.net/projects/markdown/syntax) and save
