@@ -78,6 +78,12 @@ The script does some heuristics for the value of the content argument:
     file and will read it from it
 3. Otherwise, assume the given value is literally the content
 
+## Notes on Editing
+
+Wordpress is a finicky beast (or at least the installation on our Advent is). For paragraphs: ensure they're all on one line in your Markdown, otherwise, there'll be weird line breaks in the final article.
+
+Also, there's a way to mess up code blocks on the article even after using this script. It looks like it happens if you save (or have autosave feature trigger) when using "Visual" mode. So be sure to keep around your originals and keep an eye out on messed up code blocks if you edit your articles.
+
 ----
 
 #### REPOSITORY
