@@ -10,7 +10,7 @@ To get the best syntax highlights, the module uses GitHub's Gists for
 highlighting. You'll need to
 [obtain a GitHub API token](https://github.com/settings/tokens/new). Only
 `gist   Create gists` permission is needed. After creating the gist, the
-module grabs syntax highlighted code from it, and then *deletes it*.
+script grabs syntax highlighted code from it, and then *deletes it*.
 
 # USAGE
 
