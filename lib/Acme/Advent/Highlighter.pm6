@@ -120,7 +120,7 @@ sub highlight ($dom) {
             ~ ' border-radius: 3px; padding: 10px;',
     ;
 
-    for %styles.kv -> $selector, $style {
+    for %styles.sort -> (:key($selector), :value($style)) {
         DEBUG "Applying styling to selector $selector";
         .attr: 'style', $style for $dom.find: $selector
     }
