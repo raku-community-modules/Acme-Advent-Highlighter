@@ -16,7 +16,7 @@
         "Test::When"
     ],
     "provides"     : {
-        "Advent::Highlighter::HTMLParser":
+        "Acme::Advent::Highlighter::HTMLParser":
             "lib/Acme/Advent/Highlighter/HTMLParser.pm6",
         "Acme::Advent::Highlighter":
             "lib/Acme/Advent/Highlighter.pm6"
