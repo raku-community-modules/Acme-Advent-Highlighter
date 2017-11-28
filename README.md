@@ -20,7 +20,7 @@ script grabs syntax highlighted code from it, and then *deletes it*.
     zef install Acme::Advent::Highlighter
     ```
 
-    If you're using `rakudobrew`, then [don't](https://github.com/zoffixznet/r),
+    If you're using `rakudobrew`, then [don't](http://rakudo.org/how-to-get-rakudo/#Discouraged-Tools-Rakudobrew),
     but if you insist, be sure to run `rakudobrew rehash` after installation,
     to update script shims.
 
