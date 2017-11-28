@@ -2,7 +2,7 @@
     "perl"         : "6.c",
     "name"         : "Acme::Advent::Highlighter",
     "license"      : "Artistic-2.0",
-    "version"      : "1.001002",
+    "version"      : "1.001003",
     "description"  : "Preprocessor for Perl 6 Advent Articles",
     "tags"         : [ "utils" ],
     "depends"      : [
