@@ -29,7 +29,7 @@ highlighting. You'll need to
     advent-highligher.p6 Your-Article Your-Gist-Token > out.html
     ```
 
-    The token can alternatively be given via
+    The [gist token](https://github.com/settings/tokens/new) can alternatively be given via
     `ACME_ADVENT_HIGHLIGHTER_TOKEN` environmental variable. The STDOUT of
     the script will output the rendered content while STDERR will output
     some info on what the script is doing.
