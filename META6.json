@@ -2,7 +2,7 @@
     "perl"         : "6.c",
     "name"         : "Acme::Advent::Highlighter",
     "license"      : "Artistic-2.0",
-    "version"      : "1.001004",
+    "version"      : "1.002001",
     "description"  : "Preprocessor for Perl 6 Advent Articles",
     "tags"         : [ "utils" ],
     "depends"      : [
@@ -16,6 +16,8 @@
         "Test::When"
     ],
     "provides"     : {
+        "Acme::Advent::Highlighter::MultiMarkdown":
+            "lib/Acme/Advent/Highlighter/MultiMarkdown.pm6",
         "Acme::Advent::Highlighter::HTMLParser":
             "lib/Acme/Advent/Highlighter/HTMLParser.pm6",
         "Acme::Advent::Highlighter":

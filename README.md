@@ -59,6 +59,15 @@ of markup to make the width of the article to be approximately what it is on
 Perl 6 Advent articles right now (might wanna check your codeblocks don't
 overflow if you don't want readers scrolling).
 
+## `--multi` option for Multi Markdown
+
+    advent-highligher.p6 --multi Your-Article Your-Gist-Token > out.html
+
+I found `Text::Markdown` a bit of a weak sauce and it failed to render
+some things I thought it should. If you
+[install `Inline::Perl5`](https://github.com/zoffixznet/r/blob/master/README.md#inlineperl5-with-latest-perl) along with [`Text::MultiMarkdown` Perl 5 module](https://metacpan.org/pod/Text::MultiMarkdown) (just run `cpanm -v Text::MultiMarkdown` or `cpan Text::MultiMarkdown` if you don't have `cpanm`),
+then you can add `--multi` command line option to make the script use *that* as Markdown renderer.
+
 ## Alternative Content Options
 
 The script does some heuristics for the value of the content argument:
