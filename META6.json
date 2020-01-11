@@ -13,7 +13,8 @@
         "WWW"
     ],
     "test-depends": [
-        "Test::When"
+        "Test::When",
+        "Test::Notice"
     ],
     "provides"     : {
         "Acme::Advent::Highlighter::MultiMarkdown":
