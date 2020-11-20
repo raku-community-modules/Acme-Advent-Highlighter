@@ -1,6 +1,6 @@
 # DESCRIPTION
 
-Preprocessor for Perl 6 Advent Articles, with syntax highlighter. Saves the
+Preprocessor for Raku Advent Articles, with syntax highlighter. Saves the
 trouble of not having to deal with broken escapes in code blocks in Wordpress
 and provides syntax-highlights, as a cherry on top.
 
@@ -56,7 +56,7 @@ script grabs syntax highlighted code from it, and then *deletes it*.
 If you'd like to have a rough idea of how the thing will look like on Wordpress,
 you can pass `--wrap` option to the script. It'll wrap the output into a bit
 of markup to make the width of the article to be approximately what it is on
-Perl 6 Advent articles right now (might wanna check your codeblocks don't
+Raku Advent articles right now (might wanna check your codeblocks don't
 overflow if you don't want readers scrolling).
 
 ## `--multi` option for Multi Markdown
@@ -65,7 +65,7 @@ overflow if you don't want readers scrolling).
 
 I found `Text::Markdown` to be a bit of a weak sauce and it failed to render
 some things I thought it would. If you
-[install `Inline::Perl5`](https://github.com/zoffixznet/r/blob/master/README.md#inlineperl5-with-latest-perl) along with [`Text::MultiMarkdown` Perl 5 module](https://metacpan.org/pod/Text::MultiMarkdown) (just run `cpanm -v Text::MultiMarkdown` or `cpan Text::MultiMarkdown` if you don't have `cpanm`),
+[install `Inline::Perl5`](https://github.com/zoffixznet/r/blob/master/README.md#inlineperl5-with-latest-perl) along with [`Text::MultiMarkdown` Perl module](https://metacpan.org/pod/Text::MultiMarkdown) (just run `cpanm -v Text::MultiMarkdown` or `cpan Text::MultiMarkdown` if you don't have `cpanm`),
 then you can add `--multi` command line option to make the script use *that* as Markdown renderer.
 
 ## Alternative Content Options
@@ -93,12 +93,12 @@ The script does some heuristics for the value of the content argument:
 #### REPOSITORY
 
 Fork this module on GitHub:
-https://github.com/zoffixznet/perl6-Acme-Advent-Highlighter
+https://github.com/raku-community-modules/Acme-Advent-Highlighter
 
 #### BUGS
 
 To report bugs or request features, please use
-https://github.com/zoffixznet/perl6-Acme-Advent-Highlighter/issues
+https://github.com/raku-community-modules/Acme-Advent-Highlighter/issues
 
 #### AUTHOR
 
