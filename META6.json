@@ -3,7 +3,7 @@
     "name"         : "Acme::Advent::Highlighter",
     "license"      : "Artistic-2.0",
     "version"      : "1.002002",
-    "description"  : "Preprocessor for Perl 6 Advent Articles",
+    "description"  : "Preprocessor for Raku Advent Articles",
     "tags"         : [ "utils" ],
     "depends"      : [
         "Text::Markdown",
@@ -25,5 +25,5 @@
             "lib/Acme/Advent/Highlighter.pm6"
     },
     "authors"       : ["Zoffix Znet"],
-    "support"       : {"source" : "https://github.com/zoffixznet/perl6-Acme-Advent-Highlighter.git"}
+    "support"       : {"source" : "https://github.com/raku-community-modules/Acme-Advent-Highlighter.git"}
 }
