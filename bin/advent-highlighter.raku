@@ -1,4 +1,3 @@
-
 use Acme::Advent::Highlighter;
 
 sub MAIN ($content, $token? is copy, Bool :$wrap, Bool :$multi) {

@@ -1,4 +1,3 @@
-use lib <lib>;
 use Test::When <online>;
 
 use Test::Notice;

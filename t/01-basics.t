@@ -1,4 +1,3 @@
-use lib <lib>;
 use Test;
 use Acme::Advent::Highlighter;
 use Acme::Advent::Highlighter::HTMLParser;
